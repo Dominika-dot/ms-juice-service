@@ -3,9 +3,9 @@ package com.dominika.msjuiceservice.repositories;
 import java.util.UUID;
 
 import com.dominika.msjuiceservice.domain.Juice;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface JuiceRepository extends PagingAndSortingRepository<Juice, UUID> {
+public interface JuiceRepository extends JpaRepository<Juice, UUID> {
 
 
 }
