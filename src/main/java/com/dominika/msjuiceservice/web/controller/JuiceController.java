@@ -5,6 +5,7 @@ import java.util.UUID;
 import com.dominika.msjuiceservice.web.model.JuiceDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/api/v1/juice")
@@ -17,13 +18,13 @@ public class JuiceController {
         return new ResponseEntity<>(JuiceDto.builder().build(), HttpStatus.OK);
     }
     @PostMapping
-    public ResponseEntity saveNewJuice (@RequestBody JuiceDto juiceDto){
+    public ResponseEntity saveNewJuice (@RequestBody @Validated JuiceDto juiceDto){
         //TODO impl
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
     @PutMapping("/{juiceid}")
-    public ResponseEntity updateJuice(@PathVariable UUID juiceId){
+    public ResponseEntity updateJuice(@PathVariable UUID juiceId, @RequestBody @Validated JuiceDto juiceDto){
         //TODO impl
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
