@@ -34,7 +34,7 @@ public class JuiceDto {
     private JuiceStyleEnum juiceStyle;
     @Positive
     @NotNull
-    private Long upc;
+    private String upc;
     @Positive
     @NotNull
     @JsonFormat(shape = JsonFormat.Shape.STRING)
