@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Null;
@@ -36,6 +37,7 @@ public class JuiceDto {
     private Long upc;
     @Positive
     @NotNull
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private BigDecimal price;
     private Integer quantityOnHand;
 }

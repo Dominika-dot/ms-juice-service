@@ -9,7 +9,6 @@ public class JuicePagedList extends PageImpl<JuiceDto> {
     public JuicePagedList(final List<JuiceDto> content, final Pageable pageable, final long total) {
         super(content, pageable, total);
     }
-
     public JuicePagedList(final List<JuiceDto> content) {
         super(content);
     }
